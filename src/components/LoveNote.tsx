@@ -6,9 +6,9 @@ const LoveNote = () => {
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-10 left-10 text-9xl">🌻</div>
-        <div className="absolute bottom-10 right-10 text-9xl">🌻</div>
-        <div className="absolute top-1/2 left-1/4 text-7xl text-christmas-gold">∞</div>
-        <div className="absolute top-1/3 right-1/4 text-6xl">🧿</div>
+        <div className="absolute bottom-10 right-10 text-9xl">🌷</div>
+        <div className="absolute top-1/2 left-1/4 text-7xl text-theme-gold">∞</div>
+        <div className="absolute top-1/3 right-1/4 text-6xl">🌷</div>
       </div>
 
       <motion.div
@@ -18,16 +18,31 @@ const LoveNote = () => {
         transition={{ duration: 0.8 }}
         className="max-w-3xl mx-auto relative"
       >
-        {/* Christmas Card Style Container */}
-        <div className="bg-card rounded-3xl p-8 md:p-12 shadow-card relative overflow-hidden border-2 border-christmas-red/20">
-          {/* Decorative Corner Elements */}
-          <div className="absolute top-4 left-4 text-4xl animate-pulse-glow">🎄</div>
-          <div className="absolute top-4 right-4 text-4xl animate-pulse-glow">🎄</div>
-          <div className="absolute bottom-4 left-4 text-3xl">🌻</div>
-          <div className="absolute bottom-4 right-4 text-3xl">🌻</div>
+        {/* Handwritten Note Style Container */}
+        <div 
+          className="bg-theme-cream rounded-sm p-8 md:p-12 shadow-card relative overflow-hidden"
+          style={{
+            backgroundImage: `
+              repeating-linear-gradient(
+                transparent,
+                transparent 31px,
+                hsl(220 60% 25% / 0.1) 31px,
+                hsl(220 60% 25% / 0.1) 32px
+              )
+            `,
+            backgroundPosition: '0 20px',
+          }}
+        >
+          {/* Paper texture effect */}
+          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/20 to-transparent pointer-events-none"></div>
           
-          {/* Gold Border Accent */}
-          <div className="absolute inset-4 border-2 border-christmas-gold/20 rounded-2xl pointer-events-none"></div>
+          {/* Tape decorations */}
+          <div className="absolute -top-2 left-8 w-12 h-6 bg-theme-gold/40 rotate-[-5deg] rounded-sm"></div>
+          <div className="absolute -top-2 right-8 w-12 h-6 bg-theme-gold/40 rotate-[5deg] rounded-sm"></div>
+          
+          {/* Corner flower decorations */}
+          <div className="absolute bottom-4 left-4 text-2xl opacity-60">🌻</div>
+          <div className="absolute bottom-4 right-4 text-2xl opacity-60">🌷</div>
 
           <div className="relative z-10">
             {/* Header */}
@@ -36,26 +51,25 @@ const LoveNote = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="text-center mb-8"
+              className="text-center mb-6"
             >
-              <span className="text-christmas-gold text-2xl">✨</span>
-              <h2 className="text-4xl md:text-6xl font-script text-christmas-red mt-2">
-                My Dearest Love
+              <h2 className="text-4xl md:text-5xl font-handwritten text-theme-blue">
+                My Dearest Love,
               </h2>
-              <div className="flex items-center justify-center gap-2 mt-4">
+              <div className="flex items-center justify-center gap-2 mt-3">
                 <span>🌻</span>
-                <span className="text-christmas-gold text-2xl">∞</span>
-                <span>🧿</span>
+                <span className="text-theme-gold text-2xl">∞</span>
+                <span>🌷</span>
               </div>
             </motion.div>
 
-            {/* Love Note Content */}
+            {/* Handwritten Love Note Content */}
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.5 }}
-              className="space-y-6 text-center font-serif text-lg md:text-xl leading-relaxed text-foreground/90"
+              className="space-y-5 font-handwritten text-2xl md:text-3xl leading-relaxed text-theme-blue-dark"
             >
               <p>
                 This Christmas, I want you to know that you are the greatest gift 
@@ -64,14 +78,14 @@ const LoveNote = () => {
               </p>
               
               <p>
-                Our love, represented by the infinity symbol, knows no bounds and 
-                will last forever. ∞ Every moment with you feels like magic, and 
-                I cherish each one.
+                Our love, like the infinity symbol, knows no bounds and 
+                will last forever. ∞ Every moment with you feels like magic, 
+                and I cherish each one deeply.
               </p>
               
               <p>
-                Just as the Nazar protects against all harm, my love for you is 
-                a shield that will always keep you safe and cherished. 🧿
+                You are as beautiful and delicate as a tulip in spring, 
+                bringing color and joy into every day of my life. 🌷
               </p>
 
               <p>
@@ -83,7 +97,7 @@ const LoveNote = () => {
                 initial={{ scale: 0.9 }}
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
-                className="text-christmas-red font-script text-3xl md:text-4xl pt-4"
+                className="text-theme-blue font-script text-4xl md:text-5xl pt-4 text-center"
               >
                 Forever & Always Yours ❤️
               </motion.p>
@@ -97,23 +111,19 @@ const LoveNote = () => {
               transition={{ delay: 0.8 }}
               className="mt-8 text-center"
             >
-              <div className="inline-flex items-center gap-3 px-6 py-3 bg-christmas-red/10 rounded-full">
+              <div className="inline-flex items-center gap-3 px-6 py-3 bg-theme-blue/10 rounded-full">
                 <span>🌻</span>
-                <span className="text-christmas-gold">∞</span>
-                <span>🧿</span>
-                <span className="text-christmas-red font-script text-xl">With All My Love</span>
-                <span>🧿</span>
-                <span className="text-christmas-gold">∞</span>
-                <span>🌻</span>
+                <span className="text-theme-gold">∞</span>
+                <span className="text-theme-blue font-handwritten text-2xl">With All My Love</span>
+                <span className="text-theme-gold">∞</span>
+                <span>🌷</span>
               </div>
             </motion.div>
           </div>
         </div>
 
-        {/* Holly Decoration */}
-        <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 text-4xl">
-          🎀
-        </div>
+        {/* Paper corner fold effect */}
+        <div className="absolute bottom-0 right-0 w-12 h-12 bg-gradient-to-tl from-theme-blue/20 to-transparent rounded-tl-xl"></div>
       </motion.div>
     </section>
   );

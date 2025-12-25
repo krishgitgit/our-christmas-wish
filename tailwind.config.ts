@@ -14,7 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        script: ['Great Vibes', 'cursive'],
+        script: ['Dancing Script', 'cursive'],
+        handwritten: ['Caveat', 'cursive'],
         serif: ['Crimson Pro', 'serif'],
       },
       colors: {
@@ -51,15 +52,14 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        christmas: {
-          red: "hsl(var(--christmas-red))",
-          "red-light": "hsl(var(--christmas-red-light))",
-          green: "hsl(var(--christmas-green))",
-          "green-light": "hsl(var(--christmas-green-light))",
-          gold: "hsl(var(--christmas-gold))",
-          "gold-light": "hsl(var(--christmas-gold-light))",
-          cream: "hsl(var(--christmas-cream))",
-          snow: "hsl(var(--christmas-snow))",
+        theme: {
+          blue: "hsl(var(--theme-blue))",
+          "blue-light": "hsl(var(--theme-blue-light))",
+          "blue-dark": "hsl(var(--theme-blue-dark))",
+          gold: "hsl(var(--theme-gold))",
+          "gold-light": "hsl(var(--theme-gold-light))",
+          cream: "hsl(var(--theme-cream))",
+          snow: "hsl(var(--theme-snow))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
