@@ -1,13 +1,44 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Helmet } from 'react-helmet-async';
+import Snowfall from '@/components/Snowfall';
+import FloatingSymbols from '@/components/FloatingSymbols';
+import HeroSection from '@/components/HeroSection';
+import LoveNote from '@/components/LoveNote';
+import PhotoCollage from '@/components/PhotoCollage';
+import CoverSection from '@/components/CoverSection';
+import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <>
+      <Helmet>
+        <title>Our Love Story | Counting Down to December 8th, 2027</title>
+        <meta name="description" content="A special Christmas countdown to our big day. With love, sunflowers, and infinite devotion." />
+      </Helmet>
+
+      {/* Animated Snowfall */}
+      <Snowfall />
+      
+      {/* Floating Symbols */}
+      <FloatingSymbols />
+
+      {/* Main Content */}
+      <main className="relative">
+        {/* Hero with Countdown */}
+        <HeroSection />
+
+        {/* Love Note Section */}
+        <LoveNote />
+
+        {/* Photo Collage */}
+        <PhotoCollage />
+
+        {/* Cover Photo and PDF Download */}
+        <CoverSection />
+
+        {/* Footer */}
+        <Footer />
+      </main>
+    </>
   );
 };
 
