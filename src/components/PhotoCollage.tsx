@@ -17,7 +17,7 @@ const photos = [
 
 const PhotoCollage = () => {
   return (
-    <section className="py-20 px-4 bg-christmas-red/5 relative overflow-hidden">
+    <section className="py-20 px-4 bg-theme-blue/5 relative overflow-hidden">
       {/* Background Decorations */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 text-8xl">🎄</div>
@@ -34,10 +34,10 @@ const PhotoCollage = () => {
         >
           <div className="flex items-center justify-center gap-4 mb-4">
             <span className="text-3xl">🌻</span>
-            <span className="text-christmas-gold text-4xl">∞</span>
-            <span className="text-3xl">🧿</span>
+            <span className="text-theme-gold text-4xl">∞</span>
+            <span className="text-3xl">🌷</span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-script text-christmas-red">
+          <h2 className="text-4xl md:text-6xl font-script text-theme-blue">
             Our Precious Moments
           </h2>
           <p className="mt-4 text-muted-foreground font-serif text-lg">
@@ -58,7 +58,7 @@ const PhotoCollage = () => {
               className="relative group"
             >
               {/* Polaroid Style Frame */}
-              <div className="bg-christmas-cream p-3 pb-12 rounded-sm shadow-card hover:shadow-glow transition-all duration-300">
+              <div className="bg-theme-cream p-3 pb-12 rounded-sm shadow-card hover:shadow-glow transition-all duration-300">
                 <div className="aspect-square overflow-hidden rounded-sm">
                   <img
                     src={photo.src}
@@ -69,14 +69,14 @@ const PhotoCollage = () => {
                 
                 {/* Polaroid Caption Area */}
                 <div className="absolute bottom-3 left-0 right-0 text-center">
-                  <span className="text-christmas-red/60 font-script text-lg">
+                  <span className="text-theme-blue/60 font-script text-lg">
                     Us 💕
                   </span>
                 </div>
 
                 {/* Decorative Pin */}
-                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-christmas-red rounded-full shadow-md flex items-center justify-center">
-                  <div className="w-2 h-2 bg-christmas-cream rounded-full"></div>
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-theme-blue rounded-full shadow-md flex items-center justify-center">
+                  <div className="w-2 h-2 bg-theme-cream rounded-full"></div>
                 </div>
               </div>
 
@@ -96,10 +96,10 @@ const PhotoCollage = () => {
           className="flex justify-center items-center gap-4 mt-12"
         >
           <span className="text-2xl">🌻</span>
-          <span className="text-christmas-gold text-3xl">∞</span>
-          <span className="text-christmas-red font-script text-2xl">Forever Together</span>
-          <span className="text-christmas-gold text-3xl">∞</span>
-          <span className="text-2xl">🌻</span>
+          <span className="text-theme-gold text-3xl">∞</span>
+          <span className="text-theme-blue font-script text-2xl">Forever Together</span>
+          <span className="text-theme-gold text-3xl">∞</span>
+          <span className="text-2xl">🌷</span>
         </motion.div>
       </div>
     </section>
